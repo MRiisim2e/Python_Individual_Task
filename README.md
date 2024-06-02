@@ -1,4 +1,8 @@
-# Python_Individual_Task
+# Python_Individual_Task 
+
+## Bank Deposit Challenge!
+
+* Solution for easy and medium level:
 
 ```py
 user_greeting = 'Welcome to the bank'
