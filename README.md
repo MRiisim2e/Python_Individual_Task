@@ -1,14 +1,30 @@
 # Python_Individual_Task
 
-### Easy Level
-**Description:**
-Create a program where the user can input deposits into a bank account. The program should use `if-else` statements, `input()`, `int()` and while True loop to keep track of deposits.
+```py
+user_greeting = 'Welcome to the bank'
+print(user_greeting)
 
-**Instructions:**
-1. Welcome the user to the bank
-2. Initiate balance = 0
-3. Ask the user to input the amount of money they want to deposit.
-4. Add the deposit amount to the total balance
-5. Ask the user if they want to make another deposit or exit the bank. 
-6. If they choose to make another deposit, repeat the process (while True).
-7. If not, print the total amount deposited and exit the bank.
+current_balance = 0.0
+
+try:
+  user_input = float(input(f'Your current balance is: {current_balance}. Please insert the amount you would like to deposit: '))
+  current_balance += user_input 
+  print(f'Now your balance is: {current_balance}')
+except ValueError:
+  print('Invalid input. Please insert a number.')
+  user_input = 0.0
+
+while True:
+    another_user_input = input('Please add another deposit or exit the bank by writing "exit": ')
+
+    if another_user_input.lower() == 'exit':
+      print(f'Your balance is {current_balance}. Thank you for your visit')
+      break
+    else:
+      try:
+        deposit_amount = float(another_user_input)
+        current_balance += deposit_amount
+        print(f'Your balance is: {current_balance}')
+      except ValueError:
+        print('Invalid input. Please enter a number or write "exit"')
+```
